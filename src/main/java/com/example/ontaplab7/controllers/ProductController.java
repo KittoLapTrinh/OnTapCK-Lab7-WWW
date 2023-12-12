@@ -11,10 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,7 +85,6 @@ public class ProductController {
     @GetMapping("/Buy/{id}")
     public String buyPhone(HttpSession session, @PathVariable("id") long id) {
         ArrayList<Product> lst = null;
-
         Object obj =session.getAttribute("cart");
         if(obj==null)
         {
@@ -99,11 +95,8 @@ public class ProductController {
         Product product = productRepository.findById(id);
         lst.add(product);
         session.setAttribute("cart",lst);
-
-
         return "redirect:/products";
     }
-
     @PostMapping("/update/{id}")
     public String updateUser(@PathVariable("id") long id, @Validated Product product,
                              BindingResult result, Model model) {
@@ -131,5 +124,13 @@ public class ProductController {
     public String Pay(Model model,HttpSession session) {
         session.removeAttribute("cart");
         return "redirect:/products";
+    }
+    @RestController
+    @RequestMapping("/admin")
+    public class AdminController {
+        @GetMapping
+        public String admin(){
+            return "this is admin area";
+        }
     }
 }

@@ -23,7 +23,7 @@ public class Ontaplab79Application {
         SpringApplication.run(Ontaplab79Application.class, args);
     }
 
-    @Bean
+//    @Bean
     CommandLineRunner commandLineRunner(){
         return args -> {
             Faker faker = new Faker();
