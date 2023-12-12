@@ -18,7 +18,9 @@
 ![image](https://github.com/KittoLapTrinh/OnTapCK-Lab7-WWW/assets/96908923/ff295f8e-d036-4b92-84b7-bd39c7d498b2)
 
 #CRUD
-id = 3, id = 4
 ![image](https://github.com/KittoLapTrinh/OnTapCK-Lab7-WWW/assets/96908923/e47ebd5e-7e62-40e4-9a60-262865b7a1e6)
+DELETE id = 3, id = 4
+![image](https://github.com/KittoLapTrinh/OnTapCK-Lab7-WWW/assets/96908923/03949b85-4d91-4b5c-a50c-e3a5125e4dd1)
+
 
 
